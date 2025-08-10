@@ -17,13 +17,19 @@ repositories {
         name = "sonatype"
         url = "https://oss.sonatype.org/content/groups/public/"
     }
-
     maven {
         url = "https://repo.viaversion.com"
     }
 }
 
 dependencies {
+    // Updated ViaVersion for 1.21.5 support (when available)
+    // compileOnly "com.viaversion:viaversion-api:5.1.0"
+    
+    // Updated Paper API for modern versions (when available)  
+    // compileOnly "io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT"
+    
+    // Fallback to working versions for now
     compileOnly "com.viaversion:viaversion-api:5.0.1"
     compileOnly "com.destroystokyo.paper:paper-api:1.12.2-R0.1-SNAPSHOT"
 }
