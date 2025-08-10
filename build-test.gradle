@@ -1,0 +1,27 @@
+// Test Build Configuration
+// This is a temporary build configuration to test compilation without external dependencies
+
+plugins {
+    id 'java'
+}
+
+group = 'me.inotsleep'
+version = '1.3-MC1.21.5'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
+// Create stub classes for missing dependencies for compilation test
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main/java', 'src/test/stubs']
+        }
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}

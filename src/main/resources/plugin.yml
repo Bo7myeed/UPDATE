@@ -1,5 +1,9 @@
 name: MultiVersionResourcePacks
 version: '${version}'
 main: me.inotsleep.multiversionresourcepacks.MultiVersionResourcePacks
+api-version: '1.16'
 depend:
   - ViaVersion
+description: 'Automatically serves different resource packs based on player Minecraft version. Updated for 1.21.5 support.'
+author: inotsleep
+website: https://github.com/Bo7myeed/UPDATE
